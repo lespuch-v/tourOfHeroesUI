@@ -1,0 +1,1 @@
+C:\Users\vlesp\source\repos\tourOfHeroesWithAPI\tourofheroeswithapi.client\obj\Debug\tourofheroeswithapi.client.esproj.CoreCompileInputs.cache

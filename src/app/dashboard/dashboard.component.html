@@ -1,0 +1,30 @@
+<button class="btn btn-primary w-full mt-3" (click)="openAddHeroModal()">Add New Hero</button>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div *ngFor="let hero of randomHeroes" class="card bg-base-100 shadow-xl">
+    <div class="card-body">
+      <h2 class="card-title">{{hero.name}}</h2>
+      <p class="badge badge-ghost">{{hero.type | firstLetterUpperCase }} {{ hero.type | heroType }}</p>
+      <div class="stats shadow">
+        <div class="stat">
+          <div class="stat-title">Rating</div>
+          <div class="stat-value flex items-center overflow-hidden text-xl">{{hero.rating | heroRating}}/
+            <p class="text-xl">{{hero.rating}}</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-title">Health</div>
+          <div class="stat-value flex items-center overflow-hidden text-xl">{{hero.health | heroHealth}}/
+            <p class="text-xl">{{hero.health}}</p>
+          </div>
+        </div>
+      </div>
+      <p>{{hero.description}}</p>
+      <div class="card-actions justify-end">
+        <div class="badge badge-outline">{{hero.superpower}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-8">
+  <app-add-hero-modal #addHereModal></app-add-hero-modal>
+</div>
